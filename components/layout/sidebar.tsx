@@ -13,11 +13,11 @@ function Sidebar() {
   const deleteButton = (id: string) => {
     const newplans = plans?.filter((item: Plan) => id !== item.id).reverse();
     console.log(newplans);
-    window.localStorage.setItem("plans", JSON.stringify(newplans));
+    localStorage.setItem("plans", JSON.stringify(newplans));
     window.location.reload();
   };
   useEffect(() => {
-    const allPlansString = window.localStorage.getItem("plans");
+    const allPlansString = localStorage.getItem("plans");
     if (!allPlansString) return;
     const plans = JSON.parse(allPlansString);
     if (plans?.length > 0) {

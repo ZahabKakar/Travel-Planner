@@ -52,12 +52,12 @@ export default function Main({
       prompt: `${diffDays} days trip to ${city}`,
       answer: data.plan,
     };
-    const allPlansString = window.localStorage.getItem("plans");
+    const allPlansString = localStorage.getItem("plans") || "[]";
     if (!allPlansString) return;
     let plans = JSON.parse(allPlansString);
 
     plans.push(plan);
-    window.localStorage.setItem("plans", JSON.stringify(plans));
+    localStorage.setItem("plans", JSON.stringify(plans));
     setLoading(false);
     router.push("/" + planId);
   };
