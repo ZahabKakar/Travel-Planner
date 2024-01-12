@@ -115,7 +115,7 @@ function Sidebar() {
                 router.push("/" + item.id);
               }}
               variant={"secondary"}
-              className="w-full h-16 mt-4 bottom-4 justify-between rounded-xl text-md bg-background2 "
+              className="w-full h-16 mt-4 bottom-4 justify-between rounded-xl text-sm bg-background2 "
               onMouseEnter={() => {
                 setButtonHover(true);
                 setButtonHoverItem(item.id);
