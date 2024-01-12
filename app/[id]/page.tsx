@@ -15,7 +15,7 @@ export default function Plan({
   const [plan, setPlan] = useState<Plan | null>(null);
 
   useEffect(() => {
-    const allPlansString = localStorage.getItem("plans");
+    const allPlansString = window.localStorage.getItem("plans");
     if (!allPlansString) return;
     const allPlans = JSON.parse(allPlansString);
     const plan = allPlans.filter((item: Plan) => item.id == params.id);
