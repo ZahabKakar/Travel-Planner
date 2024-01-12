@@ -11,7 +11,7 @@ function Sidebar() {
   const [buttonHover, setButtonHover] = useState(false);
   const [buttonHoverItem, setButtonHoverItem] = useState<string>();
   const deleteButton = (id: string) => {
-    const newplans = plans?.filter((item: Plan) => id !== item.id);
+    const newplans = plans?.filter((item: Plan) => id !== item.id).reverse();
     console.log(newplans);
     localStorage.setItem("plans", JSON.stringify(newplans));
     window.location.reload();
