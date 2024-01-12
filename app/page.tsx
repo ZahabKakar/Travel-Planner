@@ -1,3 +1,5 @@
+"use client";
+
 import Main from "@/components/layout/main";
 import Sidebar from "@/components/layout/sidebar";
 
