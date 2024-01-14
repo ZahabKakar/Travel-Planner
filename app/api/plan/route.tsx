@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
   Place to visit 1
   Place to visit 2
   Place to visit 3
-  Day 1:
+  Day 2:
 
   Place to visit 1
   Place to visit 2

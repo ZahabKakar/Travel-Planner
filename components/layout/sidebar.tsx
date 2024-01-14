@@ -26,7 +26,7 @@ function Sidebar() {
   }, []);
   const router = useRouter();
   return (
-    <div className=" w-80  h-full bg-background p-6 ">
+    <div className=" w-80  h-full bg-background p-6  ">
       <svg
         id="logo-87"
         width="202"
