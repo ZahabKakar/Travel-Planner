@@ -5,16 +5,17 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ScrollArea } from "../ui/scroll-area";
 import { Plan } from "@/types";
-
 function Sidebar() {
   const [plans, setPlans] = useState<Plan[]>([]);
   const [buttonHover, setButtonHover] = useState(false);
   const [buttonHoverItem, setButtonHoverItem] = useState<string>();
+  const { push } = useRouter();
+
   const deleteButton = (id: string) => {
     const newplans = plans?.filter((item: Plan) => id !== item.id).reverse();
     console.log(newplans);
     localStorage.setItem("plans", JSON.stringify(newplans));
-    window.location.reload();
+    push("/");
   };
   useEffect(() => {
     const allPlansString = localStorage.getItem("plans");
